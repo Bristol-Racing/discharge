@@ -7,8 +7,8 @@ import time
 
 fig = plt.figure()
 
-sensors = ["voltage"]
-maxVals = [1024]
+sensors = ["current","voltage"]
+maxVals = [2000, 1024]
 
 def sensorIndex(sensor):
     i = 0
@@ -93,7 +93,7 @@ with open(logFile, "w") as log:
                 axs[i].set_xlim(newTime - window, newTime)
                 axs[i].set_ylim(0, maxVals[i])
 
-    serial = Serial("/dev/ttyACM1", 57600)
+    serial = Serial('COM20', 57600)
 
     ani = animation.FuncAnimation(fig, animate, interval = 100)
     plt.show()
