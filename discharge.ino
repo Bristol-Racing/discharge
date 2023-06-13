@@ -12,7 +12,7 @@ long reading = 0;
 
 int sensorCount = 2;
 Sensor::CurrentSensor currentSensor;
-Sensor::VoltageSensor voltageSensor(VOLTAGE_VIN, 996000.0, 446500.0);
+Sensor::VoltageSensor voltageSensor(VOLTAGE_VIN, 68.677);
 
 Sensor::SensorManager manager(sensorCount, time_per_reading * readings);
 
